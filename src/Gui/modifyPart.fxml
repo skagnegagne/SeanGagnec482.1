@@ -125,7 +125,7 @@
                         <Insets bottom="5.0" left="28.5" right="28.5" top="5.0" />
                     </padding>
                 </Button>
-                <Button layoutX="435.0" layoutY="18.0" mnemonicParsing="false" onAction="#onActionReturnToHomeScreen" text="Cancel">
+                <Button layoutX="435.0" layoutY="18.0" mnemonicParsing="false" onAction="#onActionReturnToHomeScreen" text="Back">
                     <padding>
                         <Insets bottom="5.0" left="28.5" right="28.5" top="5.0" />
                     </padding>

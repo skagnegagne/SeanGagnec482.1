@@ -1,14 +1,15 @@
 package Model;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+/**inventory holds all the collum information for parts and products, and retrieves it.
+ * allows you to add, get all, lookup, update and delete first parts, then products.*/
 public class inventory {
     private static ObservableList<Part> allParts = FXCollections.observableArrayList();
     private static ObservableList<Product> allProd = FXCollections.observableArrayList();
+
     public static void addPart(Part part){
         allParts.add(part);
     }
-    //Parts First
-
     public static Part lookupPart(int partID) {
         for(Part part:allParts){
             if(part.getID()==partID){
@@ -39,7 +40,7 @@ public class inventory {
         allParts.remove(part);
     }
 
-    //Then Products
+  //Product starts here
 
     public static void addProd(Product product){
         allProd.add(product);

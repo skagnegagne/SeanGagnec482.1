@@ -1,5 +1,10 @@
 package Model;
 
+import javafx.collections.ObservableList;
+
+/** part class holds all of the part information.
+ * Getters and setters applied to all the variables of an individual part, ready to be assigned.
+ * */
 public class Part {
     private int partID;
     private String partName;
@@ -45,4 +50,5 @@ public class Part {
         return partMax; }
     public void setMax(int max){
         partMax=max; }
+
 }

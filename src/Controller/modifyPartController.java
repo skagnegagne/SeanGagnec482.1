@@ -18,12 +18,12 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
-
+/** links to fxml doc to make buttons work.
+ * Basically the same as the add part screen, where you go in with existing part info and you are free to change anything you might need to change.*/
 public class modifyPartController implements Initializable {
     Stage stage;
     Parent scene;
@@ -53,16 +53,14 @@ public class modifyPartController implements Initializable {
     void onActionModPartInHouse(ActionEvent event) {
         modPartVariableName.setText("Machine ID:");
     }
-
     @FXML
     void onActionModPartOutsource(ActionEvent event) {
         modPartVariableName.setText("Company Name:");
     }
-
     @FXML
     void onActionReturnToHomeScreen(ActionEvent event) throws IOException {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Changes won't be saved.  Do you want to go back?");
-        alert.setTitle("CONFIRMATION");
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "this screen is scary...");
+        alert.setTitle("Should we go home?");
         Optional<ButtonType> result = alert.showAndWait();
         if(result.isPresent() && result.get() == ButtonType.OK) {
             stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
