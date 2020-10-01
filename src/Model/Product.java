@@ -1,4 +1,5 @@
 package Model;
+import Model.Part;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 /**Product class holds all of the variables for products.
@@ -72,23 +73,16 @@ public class Product {
         prodMax = max;
     }
 
-    public ObservableList<Part> getAssociatedParts() {
-        return associatedParts;
+    public void addAssociatedPart(Part part) {
+        associatedParts.add(part);
+    }
+
+    public void deleteAssociatedPart(Part part) {
+        associatedParts.remove(part);
+
     }
 
     public ObservableList<Part> getAllAssociatedParts() {
-        return allAssociatedParts;
-    }
-
-    public void setAllAssociatedParts(ObservableList<Part> allAssociatedParts) {
-        this.allAssociatedParts = allAssociatedParts;
-    }
-
-    public void setAssociatedParts(ObservableList<Part> associatedParts) {
-        this.associatedParts = associatedParts;
-    }
-
-    public Part addAssociatedPart(Part tempPart) {
-        return tempPart;
+        return associatedParts;
     }
 }

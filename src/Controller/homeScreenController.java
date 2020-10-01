@@ -25,7 +25,7 @@ import java.util.ResourceBundle;
 /** Adds functionality to fxml homeScreen. Adds parts, then individually adds function to the buttons and textfields.
  * buttons to all of the different fxml docs, search function for part/product, and an exit button to close the application.
  * I would add a radio button to the homeScreen part table so you could sort by provider or machineID.
- * A big struggle has been working around java.lang.NullPointerException for the modifyProduct page.*/
+ * A big struggle has been working around java.lang.NullPointerException for the modifyProduct page.  Edited stage settings to fix it.*/
 public class homeScreenController implements Initializable {
 
     Stage stage;
@@ -137,7 +137,6 @@ public class homeScreenController implements Initializable {
             stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
             Parent scene = loader.getRoot();
             stage.setScene(new Scene(scene));
-            stage.show();
         } catch (NullPointerException e) {
             System.out.println("Error: " + e);
             System.out.println("Please select a product.");
